@@ -1,0 +1,9 @@
+# Ignore office lock & temp files
+~$*
+*.tmp
+*.zip
+*.pptx
+
+# Ignore archive & temp folders
+OLD/
+archive_backups/
