@@ -3,7 +3,7 @@
 
 Web ギャラリー・アーティスト作品紹介サイト
 
-- **メインWebギャラリー**: `forest_gallery_web.html` (または `index.html`)
+- **メインWebギャラリー**: `index.html`（公開URL: https://awakuf.github.io/forest_gallery_web/）
 - **開催場所**: 北海道帯広市 真鍋庭園
 - **会期**: 2026年9月1日 〜 11月23日
 
@@ -24,4 +24,3 @@ Web ギャラリー・アーティスト作品紹介サイト
 - **詳細マニュアル**: [アクセス解析・QR集計ガイド.md](./アクセス解析・QR集計ガイド.md)
 - **QRコードURL一覧**: [QRコードURL一覧.md](./QRコードURL一覧.md)
 - **QRコード画像ファイル**: `qr_codes/` フォルダ（全10種類・高解像度PNG）
-- **QR再生成スクリプト**: `generate_qrcodes.py`
