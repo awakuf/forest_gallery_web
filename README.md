@@ -16,3 +16,12 @@ Web ギャラリー・アーティスト作品紹介サイト
 6. 中林拓巳 (Takumi Nakabayashi) - 『返礼』
 7. 水野夏 (Natsu Mizuno) - 『1070.43』
 8. 渡邉光子 (Mitsuko Watanabe) - 『人はみな言葉でできた、庭だから』
+
+---
+
+### アクセス解析・QRコード運用
+- **アクセス解析 (GA4)**: 測定ID `G-6LRDWNFBVW` 導入済み
+- **詳細マニュアル**: [アクセス解析・QR集計ガイド.md](./アクセス解析・QR集計ガイド.md)
+- **QRコードURL一覧**: [QRコードURL一覧.md](./QRコードURL一覧.md)
+- **QRコード画像ファイル**: `qr_codes/` フォルダ（全10種類・高解像度PNG）
+- **QR再生成スクリプト**: `generate_qrcodes.py`
