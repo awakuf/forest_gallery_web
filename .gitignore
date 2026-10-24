@@ -3,10 +3,13 @@
 *.tmp
 *.zip
 *.pptx
+*.pdf
 
 # Ignore archive & temp folders
 OLD/
 archive_backups/
+20261024_写真/
+20261025_写真/
 
 # Ignore local management assets & guides (do not push to public GitHub)
 qr_codes/
