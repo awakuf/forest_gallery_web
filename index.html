@@ -13,10 +13,11 @@
     gtag('config', 'G-6LRDWNFBVW');
   </script>
   <title>Field Installation Summer Camp 2026 | 真鍋庭園 (クイックインデックス搭載)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap">
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
-
     body {
       font-family: 'Noto Sans JP', sans-serif;
       background-color: #050B08;
@@ -25,7 +26,6 @@
     .font-serif-jp {
       font-family: 'Noto Serif JP', serif;
     }
-    
     .bg-dark-card {
       background: rgba(9, 21, 16, 0.95);
       backdrop-filter: blur(12px);
@@ -71,48 +71,21 @@
 
       <!-- Featured Photo Banner -->
       <div class="relative rounded-2xl overflow-hidden border border-emerald-800/40 h-44 shadow-lg">
-        <img src="assets/form_banner.jpg" alt="Googleフォーム公式ヘッダー写真 (Field Installation Summer Camp)" class="w-full h-full object-cover">
+        <img src="assets/form_banner.jpg" alt="Googleフォーム公式ヘッダー写真 (Field Installation Summer Camp)" fetchpriority="high" decoding="async" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-emerald-950/40 backdrop-blur-[1px]"></div>
         <div class="absolute bottom-3 left-3 text-xs font-mono text-emerald-300 bg-black/60 px-2.5 py-1 rounded backdrop-blur border border-emerald-900/60">
           // MANABE GARDEN FOREST & LIGHT
         </div>
       </div>
 
-      <!-- QUICK ARTIST INDEX CHIPS (NEW FEATURE FOR TOP VISIBILITY) -->
-      
-        <!-- Top Quick Artist Index Badges (50音順) -->
-        <div class="bg-[#0A1A12] p-4 rounded-2xl border border-emerald-900/60 space-y-2">
-          <div class="flex items-center justify-between text-[10px] font-mono text-emerald-400">
-            <span>// QUICK INDEX (タップでジャンプ)</span>
-            <span>全8名 (50音順)</span>
-          </div>
-          <div class="flex flex-wrap gap-1.5 pt-1">
-            <a href="#artist-01" class="px-2.5 py-1 bg-emerald-900/80 hover:bg-emerald-600 border border-emerald-600/60 rounded-full text-xs text-white font-medium transition-all shadow-sm">
-              01. 赤木ミライ
-            </a>
-            <a href="#artist-02" class="px-2.5 py-1 bg-emerald-950/90 hover:bg-emerald-800 border border-emerald-800/80 rounded-full text-xs text-emerald-200/90 font-medium transition-all">
-              02. アザミユウカ
-            </a>
-            <a href="#artist-03" class="px-2.5 py-1 bg-emerald-950/90 hover:bg-emerald-800 border border-emerald-800/80 rounded-full text-xs text-emerald-200/90 font-medium transition-all">
-              03. 清水日菜乃
-            </a>
-            <a href="#artist-04" class="px-2.5 py-1 bg-emerald-950/90 hover:bg-emerald-800 border border-emerald-800/80 rounded-full text-xs text-emerald-200/90 font-medium transition-all">
-              04. 髙野友希
-            </a>
-            <a href="#artist-05" class="px-2.5 py-1 bg-emerald-950/90 hover:bg-emerald-800 border border-emerald-800/80 rounded-full text-xs text-emerald-200/90 font-medium transition-all">
-              05. 武田なのか
-            </a>
-            <a href="#artist-06" class="px-2.5 py-1 bg-emerald-950/90 hover:bg-emerald-800 border border-emerald-800/80 rounded-full text-xs text-emerald-200/90 font-medium transition-all">
-              06. 中林拓巳
-            </a>
-            <a href="#artist-07" class="px-2.5 py-1 bg-emerald-950/90 hover:bg-emerald-800 border border-emerald-800/80 rounded-full text-xs text-emerald-200/90 font-medium transition-all">
-              07. 水野 夏
-            </a>
-            <a href="#artist-08" class="px-2.5 py-1 bg-emerald-950/90 hover:bg-emerald-800 border border-emerald-800/80 rounded-full text-xs text-emerald-200/90 font-medium transition-all">
-              08. 渡邉光子
-            </a>
-          </div>
+      <!-- Top Quick Artist Index Badges (50音順) -->
+      <div id="quick-index" class="scroll-mt-16 bg-[#0A1A12] p-4 rounded-2xl border border-emerald-900/60 space-y-2">
+        <div class="flex items-center justify-between text-[10px] font-mono text-emerald-400">
+          <span>// QUICK INDEX (タップでジャンプ)</span>
+          <span>全8名 (50音順)</span>
         </div>
+        <div id="quick-index-list" class="flex flex-wrap gap-1.5 pt-1"></div>
+      </div>
 
       <div class="p-3.5 bg-emerald-950/40 border border-emerald-800/40 rounded-xl text-xs space-y-1.5 font-mono">
         <div class="text-emerald-300 font-bold">DATE: 2026.09.01 - 11.23</div>
@@ -130,9 +103,8 @@
       </div>
     </section>
 
-
-    <!-- CONCEPT SECTION (NO PHOTO & DEDUPLICATED OFFICIAL FORM TEXT) -->
-    <section id="concept" class="bg-dark-card rounded-3xl p-6 border border-emerald-900/60 space-y-4">
+    <!-- CONCEPT SECTION -->
+    <section id="concept" class="scroll-mt-16 bg-dark-card rounded-3xl p-6 border border-emerald-900/60 space-y-4">
       <div class="text-[10px] font-mono text-emerald-400">// CONCEPT STORY</div>
 
       <h2 class="text-xl font-bold font-serif-jp text-white leading-snug">
@@ -149,9 +121,8 @@
       </blockquote>
     </section>
 
-
     <!-- PARTICIPANTS & WORKS -->
-    <section id="works" class="space-y-8">
+    <section id="works" class="scroll-mt-16 space-y-8">
       <div class="flex items-center justify-between border-b border-emerald-950 pb-3">
         <div>
           <span class="text-[10px] font-mono text-emerald-400 block">// PARTICIPANTS & WORKS (50音順)</span>
@@ -162,910 +133,11 @@
         </span>
       </div>
 
-      <div class="space-y-12">
-
-        <!-- Entry #01 : 赤木ミライ -->
-        <article id="artist-01" class="scroll-mt-16 bg-[#08130e] rounded-3xl p-6 border border-emerald-900/60 shadow-xl space-y-6 hover:border-emerald-700/80 transition-all">
-          
-          <!-- 1. アーティスト ヘッダー (名前 & バッジ) -->
-          <div class="flex items-start justify-between gap-4 border-b border-emerald-950/80 pb-4">
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="px-2.5 py-0.5 bg-emerald-950 border border-emerald-800 text-emerald-300 font-mono text-xs font-bold rounded-full">
-                  #01
-                </span>
-                <span class="text-xs font-mono text-gray-400">[あかぎ みらい]</span>
-              </div>
-              <h3 class="text-2xl font-bold font-serif-jp text-white tracking-tight mt-1">
-                赤木ミライ
-              </h3>
-              <p class="text-xs font-mono text-emerald-400/90 font-medium">
-                Mirai Akagi
-              </p>
-            </div>
-            <div class="text-right shrink-0">
-              <span class="inline-block px-3 py-1 bg-emerald-900/40 text-emerald-300 border border-emerald-700/50 text-[11px] font-mono rounded-lg">
-                FISC 2026
-              </span>
-            </div>
-          </div>
-
-          <!-- 2. アーティスト写真 (フルサイズ正方形) -->
-          <div class="space-y-2">
-            <div class="relative rounded-2xl overflow-hidden aspect-square border border-emerald-800/60 bg-emerald-950/40 shadow-lg">
-              <img src="assets/slide_photo_1.jpg" alt="赤木ミライ プロフィール写真" class="w-full h-full object-cover" />
-              <div class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[11px] font-mono text-gray-200">
-                👤 Artist Portrait
-              </div>
-            </div>
-          </div>
-
-          <!-- 3. 作品タイトル & ステートメント (STATEMENT) -->
-          <div class="space-y-3 bg-[#06100b] p-5 rounded-2xl border border-emerald-950/90">
-            <div class="border-b border-emerald-900/50 pb-2">
-              <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-bold">Work Title</div>
-              <div class="text-lg font-bold font-serif-jp text-white">「仮住まい」</div>
-              <div class="text-xs font-sans italic text-gray-400">“A Temporary Dwelling”</div>
-            </div>
-            <div class="space-y-3 pt-1">
-              <div>
-                <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-bold mb-1">Statement</div>
-                <p class="text-xs text-gray-200 leading-relaxed font-serif-jp">
-                  庭園という人間によって管理された自然の中に、一時的な「仮住まい」を出現させることで、人間と自然の距離、そして「自分の居場所とは何か」を問い直す。
-                </p>
-              </div>
-              <div class="pt-2 border-t border-emerald-950/60">
-                <p class="text-[11px] text-gray-400 leading-relaxed font-sans italic">
-                  By bringing a temporary “dwelling” into being within the garden — nature managed by human hands — this work questions the distance between people and nature, and asks what it means to have a place of one’s own.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 4. 作品写真ギャラリー (STATEMENTとQRコードの間に配置) -->
-          <div id="gallery-01" class="space-y-2.5 bg-[#050e09] p-3.5 rounded-2xl border border-emerald-900/60 shadow-inner">
-            <div class="flex items-center justify-between px-1">
-              <span class="text-[11px] font-mono text-emerald-400 font-bold tracking-wider">🌿 INSTALLATION VIEW // 作品写真 (全5枚)</span>
-              <span class="text-[10px] font-mono text-gray-400">タップで切替・拡大</span>
-            </div>
-            <div class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-700/60 bg-[#040c07] shadow-lg group cursor-pointer" onclick="openLightbox(this.querySelector('img').src, '赤木ミライ — 「仮住まい」')">
-              <img id="gallery-01-main" src="assets/works/artist_01_1.jpg" alt="赤木ミライ 「仮住まい」 メイン写真" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
-              <div class="absolute bottom-2.5 left-2.5 bg-black/65 backdrop-blur-md px-2.5 py-1 rounded-lg border border-emerald-500/30 text-[10px] font-serif-jp text-emerald-200">
-                「仮住まい」 <span class="font-sans italic text-gray-300">“A Temporary Dwelling”</span>
-              </div>
-              <div class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md px-2 py-1 rounded-lg border border-white/15 text-[10px] font-mono text-gray-200">
-                🔍 拡大
-              </div>
-            </div>
-            <div class="grid grid-cols-5 gap-1.5 pt-0.5">
-              <button type="button" onclick="switchGalleryPhoto('gallery-01', 'assets/works/artist_01_1.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all ring-2 ring-emerald-400 opacity-100">
-                <img src="assets/works/artist_01_1.jpg" alt="赤木ミライ 「仮住まい」 写真1" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-01', 'assets/works/artist_01_2.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_01_2.jpg" alt="赤木ミライ 「仮住まい」 写真2" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-01', 'assets/works/artist_01_3.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_01_3.jpg" alt="赤木ミライ 「仮住まい」 写真3" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-01', 'assets/works/artist_01_4.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_01_4.jpg" alt="赤木ミライ 「仮住まい」 写真4" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-01', 'assets/works/artist_01_5.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_01_5.jpg" alt="赤木ミライ 「仮住まい」 写真5" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-            </div>
-          </div>
-
-          <!-- 5. Instagram QRコード & リンク -->
-          <div class="bg-[#050e09] border border-emerald-900/40 rounded-2xl p-4 flex items-center justify-between gap-4">
-            <div class="flex items-center gap-3.5">
-              <div class="w-14 h-14 bg-white p-1 rounded-xl shrink-0 shadow-md">
-                <img src="assets/qr_codes/mirai_ef65.png" alt="赤木ミライ Instagram QR" class="w-full h-full object-contain" />
-              </div>
-              <div>
-                <div class="text-[11px] text-gray-400 font-mono">Official Instagram</div>
-                <div class="text-xs font-mono font-bold text-white">@mirai_ef65</div>
-                <a href="https://www.instagram.com/mirai_ef65/" target="_blank" class="inline-block text-[11px] text-emerald-400 hover:text-emerald-300 underline font-mono mt-0.5">
-                  プロフィールを開く →
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Entry #02 : アザミユウカ -->
-        <article id="artist-02" class="scroll-mt-16 bg-[#08130e] rounded-3xl p-6 border border-emerald-900/60 shadow-xl space-y-6 hover:border-emerald-700/80 transition-all">
-          
-          <!-- 1. アーティスト ヘッダー (名前 & バッジ) -->
-          <div class="flex items-start justify-between gap-4 border-b border-emerald-950/80 pb-4">
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="px-2.5 py-0.5 bg-emerald-950 border border-emerald-800 text-emerald-300 font-mono text-xs font-bold rounded-full">
-                  #02
-                </span>
-                <span class="text-xs font-mono text-gray-400">[あざみ ゆうか]</span>
-              </div>
-              <h3 class="text-2xl font-bold font-serif-jp text-white tracking-tight mt-1">
-                アザミユウカ
-              </h3>
-              <p class="text-xs font-mono text-emerald-400/90 font-medium">
-                Yuuka Azami
-              </p>
-            </div>
-            <div class="text-right shrink-0">
-              <span class="inline-block px-3 py-1 bg-emerald-900/40 text-emerald-300 border border-emerald-700/50 text-[11px] font-mono rounded-lg">
-                FISC 2026
-              </span>
-            </div>
-          </div>
-
-          <!-- 2. アーティスト写真 (フルサイズ正方形) -->
-          <div class="space-y-2">
-            <div class="relative rounded-2xl overflow-hidden aspect-square border border-emerald-800/60 bg-emerald-950/40 shadow-lg">
-              <img src="assets/slide_photo_8.jpg" alt="アザミユウカ プロフィール写真" class="w-full h-full object-cover" />
-              <div class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[11px] font-mono text-gray-200">
-                👤 Artist Portrait
-              </div>
-            </div>
-          </div>
-
-          <!-- 3. 作品タイトル & ステートメント (STATEMENT) -->
-          <div class="space-y-3 bg-[#06100b] p-5 rounded-2xl border border-emerald-950/90">
-            <div class="border-b border-emerald-900/50 pb-2">
-              <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-bold">Work Title</div>
-              <div class="text-lg font-bold font-serif-jp text-white">「庭の中の布」</div>
-              <div class="text-xs font-sans italic text-gray-400">“Cloth in the Garden”</div>
-            </div>
-            <div class="space-y-3 pt-1">
-              <div>
-                <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-bold mb-1">Statement</div>
-                <p class="text-xs text-gray-200 leading-relaxed font-serif-jp">
-                  空間に布を張り、キャンバスに見立てる。その向こうの景色を絵の具として取り込み、布の揺らぎや鑑賞者の動きなどによって常に異なる表情を見せる「色のない絵画」。
-                </p>
-              </div>
-              <div class="pt-2 border-t border-emerald-950/60">
-                <p class="text-[11px] text-gray-400 leading-relaxed font-sans italic">
-                  A length of cloth is stretched across the space, standing in for a canvas. The scenery beyond becomes its pigment — a “colorless painting” whose expression keeps shifting with the sway of the cloth and the movement of the viewer.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 4. 作品写真ギャラリー (STATEMENTとQRコードの間に配置) -->
-          <div id="gallery-02" class="space-y-2.5 bg-[#050e09] p-3.5 rounded-2xl border border-emerald-900/60 shadow-inner">
-            <div class="flex items-center justify-between px-1">
-              <span class="text-[11px] font-mono text-emerald-400 font-bold tracking-wider">🌿 INSTALLATION VIEW // 作品写真 (全5枚)</span>
-              <span class="text-[10px] font-mono text-gray-400">タップで切替・拡大</span>
-            </div>
-            <div class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-700/60 bg-[#040c07] shadow-lg group cursor-pointer" onclick="openLightbox(this.querySelector('img').src, 'アザミユウカ — 「庭の中の布」')">
-              <img id="gallery-02-main" src="assets/works/artist_02_1.jpg" alt="アザミユウカ 「庭の中の布」 メイン写真" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
-              <div class="absolute bottom-2.5 left-2.5 bg-black/65 backdrop-blur-md px-2.5 py-1 rounded-lg border border-emerald-500/30 text-[10px] font-serif-jp text-emerald-200">
-                「庭の中の布」 <span class="font-sans italic text-gray-300">“Cloth in the Garden”</span>
-              </div>
-              <div class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md px-2 py-1 rounded-lg border border-white/15 text-[10px] font-mono text-gray-200">
-                🔍 拡大
-              </div>
-            </div>
-            <div class="grid grid-cols-5 gap-1.5 pt-0.5">
-              <button type="button" onclick="switchGalleryPhoto('gallery-02', 'assets/works/artist_02_1.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all ring-2 ring-emerald-400 opacity-100">
-                <img src="assets/works/artist_02_1.jpg" alt="アザミユウカ 「庭の中の布」 写真1" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-02', 'assets/works/artist_02_2.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_02_2.jpg" alt="アザミユウカ 「庭の中の布」 写真2" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-02', 'assets/works/artist_02_3.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_02_3.jpg" alt="アザミユウカ 「庭の中の布」 写真3" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-02', 'assets/works/artist_02_4.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_02_4.jpg" alt="アザミユウカ 「庭の中の布」 写真4" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-02', 'assets/works/artist_02_5.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_02_5.jpg" alt="アザミユウカ 「庭の中の布」 写真5" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-            </div>
-          </div>
-
-          <!-- 5. Instagram QRコード & リンク -->
-          <div class="bg-[#050e09] border border-emerald-900/40 rounded-2xl p-4 flex items-center justify-between gap-4">
-            <div class="flex items-center gap-3.5">
-              <div class="w-14 h-14 bg-white p-1 rounded-xl shrink-0 shadow-md">
-                <img src="assets/qr_codes/azami_1105_.png" alt="アザミユウカ Instagram QR" class="w-full h-full object-contain" />
-              </div>
-              <div>
-                <div class="text-[11px] text-gray-400 font-mono">Official Instagram</div>
-                <div class="text-xs font-mono font-bold text-white">@azami_1105_</div>
-                <a href="https://www.instagram.com/azami_1105_/" target="_blank" class="inline-block text-[11px] text-emerald-400 hover:text-emerald-300 underline font-mono mt-0.5">
-                  プロフィールを開く →
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Entry #03 : 清水日菜乃 -->
-        <article id="artist-03" class="scroll-mt-16 bg-[#08130e] rounded-3xl p-6 border border-emerald-900/60 shadow-xl space-y-6 hover:border-emerald-700/80 transition-all">
-          
-          <!-- 1. アーティスト ヘッダー (名前 & バッジ) -->
-          <div class="flex items-start justify-between gap-4 border-b border-emerald-950/80 pb-4">
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="px-2.5 py-0.5 bg-emerald-950 border border-emerald-800 text-emerald-300 font-mono text-xs font-bold rounded-full">
-                  #03
-                </span>
-                <span class="text-xs font-mono text-gray-400">[しみず ひなの]</span>
-              </div>
-              <h3 class="text-2xl font-bold font-serif-jp text-white tracking-tight mt-1">
-                清水日菜乃
-              </h3>
-              <p class="text-xs font-mono text-emerald-400/90 font-medium">
-                Hinano Shimizu
-              </p>
-            </div>
-            <div class="text-right shrink-0">
-              <span class="inline-block px-3 py-1 bg-emerald-900/40 text-emerald-300 border border-emerald-700/50 text-[11px] font-mono rounded-lg">
-                FISC 2026
-              </span>
-            </div>
-          </div>
-
-          <!-- 2. アーティスト写真 (フルサイズ正方形) -->
-          <div class="space-y-2">
-            <div class="relative rounded-2xl overflow-hidden aspect-square border border-emerald-800/60 bg-emerald-950/40 shadow-lg">
-              <img src="assets/slide_photo_3.jpg" alt="清水日菜乃 プロフィール写真" class="w-full h-full object-cover" />
-              <div class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[11px] font-mono text-gray-200">
-                👤 Artist Portrait
-              </div>
-            </div>
-          </div>
-
-          <!-- 3. 作品タイトル & ステートメント (STATEMENT) -->
-          <div class="space-y-3 bg-[#06100b] p-5 rounded-2xl border border-emerald-950/90">
-            <div class="border-b border-emerald-900/50 pb-2">
-              <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-bold">Work Title</div>
-              <div class="text-lg font-bold font-serif-jp text-white">「穏やかな日」</div>
-              <div class="text-xs font-sans italic text-gray-400">“A Quiet Day”</div>
-            </div>
-            <div class="space-y-3 pt-1">
-              <div>
-                <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-bold mb-1">Statement</div>
-                <p class="text-xs text-gray-200 leading-relaxed font-serif-jp">
-                  池にいる鴨と一緒に浮かぶ夢を叶える
-                </p>
-              </div>
-              <div class="pt-2 border-t border-emerald-950/60">
-                <p class="text-[11px] text-gray-400 leading-relaxed font-sans italic">
-                  A dream of floating alongside the ducks on the pond, come true.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 4. 作品写真ギャラリー (STATEMENTとQRコードの間に配置) -->
-          <div id="gallery-03" class="space-y-2.5 bg-[#050e09] p-3.5 rounded-2xl border border-emerald-900/60 shadow-inner">
-            <div class="flex items-center justify-between px-1">
-              <span class="text-[11px] font-mono text-emerald-400 font-bold tracking-wider">🌿 INSTALLATION VIEW // 作品写真 (全5枚)</span>
-              <span class="text-[10px] font-mono text-gray-400">タップで切替・拡大</span>
-            </div>
-            <div class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-700/60 bg-[#040c07] shadow-lg group cursor-pointer" onclick="openLightbox(this.querySelector('img').src, '清水日菜乃 — 「穏やかな日」')">
-              <img id="gallery-03-main" src="assets/works/artist_03_1.jpg" alt="清水日菜乃 「穏やかな日」 メイン写真" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
-              <div class="absolute bottom-2.5 left-2.5 bg-black/65 backdrop-blur-md px-2.5 py-1 rounded-lg border border-emerald-500/30 text-[10px] font-serif-jp text-emerald-200">
-                「穏やかな日」 <span class="font-sans italic text-gray-300">“A Quiet Day”</span>
-              </div>
-              <div class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md px-2 py-1 rounded-lg border border-white/15 text-[10px] font-mono text-gray-200">
-                🔍 拡大
-              </div>
-            </div>
-            <div class="grid grid-cols-5 gap-1.5 pt-0.5">
-              <button type="button" onclick="switchGalleryPhoto('gallery-03', 'assets/works/artist_03_1.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all ring-2 ring-emerald-400 opacity-100">
-                <img src="assets/works/artist_03_1.jpg" alt="清水日菜乃 「穏やかな日」 写真1" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-03', 'assets/works/artist_03_2.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_03_2.jpg" alt="清水日菜乃 「穏やかな日」 写真2" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-03', 'assets/works/artist_03_3.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_03_3.jpg" alt="清水日菜乃 「穏やかな日」 写真3" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-03', 'assets/works/artist_03_4.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_03_4.jpg" alt="清水日菜乃 「穏やかな日」 写真4" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-03', 'assets/works/artist_03_5.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_03_5.jpg" alt="清水日菜乃 「穏やかな日」 写真5" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-            </div>
-          </div>
-
-          <!-- 5. Instagram QRコード & リンク -->
-          <div class="bg-[#050e09] border border-emerald-900/40 rounded-2xl p-4 flex items-center justify-between gap-4">
-            <div class="flex items-center gap-3.5">
-              <div class="w-14 h-14 bg-white p-1 rounded-xl shrink-0 shadow-md">
-                <img src="assets/qr_codes/sculpture_432.png" alt="清水日菜乃 Instagram QR" class="w-full h-full object-contain" />
-              </div>
-              <div>
-                <div class="text-[11px] text-gray-400 font-mono">Official Instagram</div>
-                <div class="text-xs font-mono font-bold text-white">@sculpture_432</div>
-                <a href="https://www.instagram.com/sculpture_432/" target="_blank" class="inline-block text-[11px] text-emerald-400 hover:text-emerald-300 underline font-mono mt-0.5">
-                  プロフィールを開く →
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Entry #04 : 髙野友希 -->
-        <article id="artist-04" class="scroll-mt-16 bg-[#08130e] rounded-3xl p-6 border border-emerald-900/60 shadow-xl space-y-6 hover:border-emerald-700/80 transition-all">
-          
-          <!-- 1. アーティスト ヘッダー (名前 & バッジ) -->
-          <div class="flex items-start justify-between gap-4 border-b border-emerald-950/80 pb-4">
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="px-2.5 py-0.5 bg-emerald-950 border border-emerald-800 text-emerald-300 font-mono text-xs font-bold rounded-full">
-                  #04
-                </span>
-                <span class="text-xs font-mono text-gray-400">[たかの ともき]</span>
-              </div>
-              <h3 class="text-2xl font-bold font-serif-jp text-white tracking-tight mt-1">
-                髙野友希
-              </h3>
-              <p class="text-xs font-mono text-emerald-400/90 font-medium">
-                Tomoki Takano
-              </p>
-            </div>
-            <div class="text-right shrink-0">
-              <span class="inline-block px-3 py-1 bg-emerald-900/40 text-emerald-300 border border-emerald-700/50 text-[11px] font-mono rounded-lg">
-                FISC 2026
-              </span>
-            </div>
-          </div>
-
-          <!-- 2. アーティスト写真 (フルサイズ正方形) -->
-          <div class="space-y-2">
-            <div class="relative rounded-2xl overflow-hidden aspect-square border border-emerald-800/60 bg-emerald-950/40 shadow-lg">
-              <img src="assets/slide_photo_5.jpg" alt="髙野友希 プロフィール写真" class="w-full h-full object-cover" />
-              <div class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[11px] font-mono text-gray-200">
-                👤 Artist Portrait
-              </div>
-            </div>
-          </div>
-
-          <!-- 3. 作品タイトル & ステートメント (STATEMENT) -->
-          <div class="space-y-3 bg-[#06100b] p-5 rounded-2xl border border-emerald-950/90">
-            <div class="border-b border-emerald-900/50 pb-2">
-              <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-bold">Work Title</div>
-              <div class="text-lg font-bold font-serif-jp text-white">「羽衣」 / 「思うがままに」</div>
-              <div class="text-xs font-sans italic text-gray-400">“Hagoromo (Celestial Robe)” / “As the Heart Desires”</div>
-            </div>
-            <div class="space-y-3 pt-1">
-              <div>
-                <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-bold mb-1">Statement</div>
-                <p class="text-xs text-gray-200 leading-relaxed font-serif-jp">
-                  【羽衣】光り輝く木漏れ日によって天国のように思えた真鍋庭園に、天女の羽衣のような柔らかくしなやかな作品を作りました。<br><br>【思うがままに】一面浮き草に覆われた広い池を見た時に、ここをキャンバスにして絵を描きたいと思いました。そこから真っ白なスケートリンクに自由に軌跡を描いていくフィギアスケーターを作ろうと思いたちました。
-                </p>
-              </div>
-              <div class="pt-2 border-t border-emerald-950/60">
-                <p class="text-[11px] text-gray-400 leading-relaxed font-sans italic">
-                  “Hagoromo”: Manabe Garden, alight with glittering dappled sunlight, felt like heaven to me — so I made a work as soft and supple as a celestial maiden’s feathered robe.<br><br>“As the Heart Desires”: When I saw the wide pond covered entirely in duckweed, I wanted to turn it into a canvas and paint on it. That inspired me to create a figure skater, freely tracing trajectories across a pure white skating rink.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 4. 作品写真ギャラリー (STATEMENTとQRコードの間に配置) -->
-          <div class="space-y-4 bg-[#050e09] p-3.5 rounded-2xl border border-emerald-900/60 shadow-inner">
-            <!-- 作品①：羽衣 -->
-            <div id="gallery-04-1" class="space-y-2">
-              <div class="flex items-center justify-between px-1">
-                <span class="text-[11px] font-mono text-emerald-400 font-bold">🌿 WORK 01 // 「羽衣」 “Hagoromo”</span>
-                <span class="text-[10px] font-mono text-gray-400">全3枚</span>
-              </div>
-              <div class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-700/60 bg-[#040c07] shadow-lg group cursor-pointer" onclick="openLightbox(this.querySelector('img').src, '髙野友希 — 「羽衣」')">
-                <img id="gallery-04-1-main" src="assets/works/artist_04_w1_1.jpg" alt="髙野友希「羽衣」メイン写真" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
-                <div class="absolute bottom-2.5 left-2.5 bg-black/65 backdrop-blur-md px-2.5 py-1 rounded-lg border border-emerald-500/30 text-[10px] font-serif-jp text-emerald-200">
-                  「羽衣」 <span class="font-sans italic text-gray-300">“Hagoromo (Celestial Robe)”</span>
-                </div>
-                <div class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md px-2 py-1 rounded-lg border border-white/15 text-[10px] font-mono text-gray-200">
-                  🔍 拡大
-                </div>
-              </div>
-              <div class="grid grid-cols-3 gap-2 pt-0.5">
-                <button type="button" onclick="switchGalleryPhoto('gallery-04-1', 'assets/works/artist_04_w1_1.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all ring-2 ring-emerald-400 opacity-100">
-                  <img src="assets/works/artist_04_w1_1.jpg" alt="髙野友希「羽衣」写真1" loading="lazy" class="w-full h-full object-cover" />
-                </button>
-                <button type="button" onclick="switchGalleryPhoto('gallery-04-1', 'assets/works/artist_04_w1_2.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                  <img src="assets/works/artist_04_w1_2.jpg" alt="髙野友希「羽衣」写真2" loading="lazy" class="w-full h-full object-cover" />
-                </button>
-                <button type="button" onclick="switchGalleryPhoto('gallery-04-1', 'assets/works/artist_04_w1_3.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                  <img src="assets/works/artist_04_w1_3.jpg" alt="髙野友希「羽衣」写真3" loading="lazy" class="w-full h-full object-cover" />
-                </button>
-              </div>
-            </div>
-
-            <!-- 作品②：思うがままに -->
-            <div id="gallery-04-2" class="space-y-2 pt-3 border-t border-emerald-950/80">
-              <div class="flex items-center justify-between px-1">
-                <span class="text-[11px] font-mono text-emerald-400 font-bold">🌿 WORK 02 // 「思うがままに」 “As the Heart Desires”</span>
-                <span class="text-[10px] font-mono text-gray-400">全3枚</span>
-              </div>
-              <div class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-700/60 bg-[#040c07] shadow-lg group cursor-pointer" onclick="openLightbox(this.querySelector('img').src, '髙野友希 — 「思うがままに」')">
-                <img id="gallery-04-2-main" src="assets/works/artist_04_w2_1.jpg" alt="髙野友希「思うがままに」メイン写真" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
-                <div class="absolute bottom-2.5 left-2.5 bg-black/65 backdrop-blur-md px-2.5 py-1 rounded-lg border border-emerald-500/30 text-[10px] font-serif-jp text-emerald-200">
-                  「思うがままに」 <span class="font-sans italic text-gray-300">“As the Heart Desires”</span>
-                </div>
-                <div class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md px-2 py-1 rounded-lg border border-white/15 text-[10px] font-mono text-gray-200">
-                  🔍 拡大
-                </div>
-              </div>
-              <div class="grid grid-cols-3 gap-2 pt-0.5">
-                <button type="button" onclick="switchGalleryPhoto('gallery-04-2', 'assets/works/artist_04_w2_1.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all ring-2 ring-emerald-400 opacity-100">
-                  <img src="assets/works/artist_04_w2_1.jpg" alt="髙野友希「思うがままに」写真1" loading="lazy" class="w-full h-full object-cover" />
-                </button>
-                <button type="button" onclick="switchGalleryPhoto('gallery-04-2', 'assets/works/artist_04_w2_2.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                  <img src="assets/works/artist_04_w2_2.jpg" alt="髙野友希「思うがままに」写真2" loading="lazy" class="w-full h-full object-cover" />
-                </button>
-                <button type="button" onclick="switchGalleryPhoto('gallery-04-2', 'assets/works/artist_04_w2_3.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                  <img src="assets/works/artist_04_w2_3.jpg" alt="髙野友希「思うがままに」写真3" loading="lazy" class="w-full h-full object-cover" />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- 5. Instagram QRコード & リンク -->
-          <div class="bg-[#050e09] border border-emerald-900/40 rounded-2xl p-4 flex items-center justify-between gap-4">
-            <div class="flex items-center gap-3.5">
-              <div class="w-14 h-14 bg-white p-1 rounded-xl shrink-0 shadow-md">
-                <img src="assets/qr_codes/tomoki__takano.png" alt="髙野友希 Instagram QR" class="w-full h-full object-contain" />
-              </div>
-              <div>
-                <div class="text-[11px] text-gray-400 font-mono">Official Instagram</div>
-                <div class="text-xs font-mono font-bold text-white">@tomoki__takano</div>
-                <a href="https://www.instagram.com/tomoki__takano/" target="_blank" class="inline-block text-[11px] text-emerald-400 hover:text-emerald-300 underline font-mono mt-0.5">
-                  プロフィールを開く →
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Entry #05 : 武田なのか -->
-        <article id="artist-05" class="scroll-mt-16 bg-[#08130e] rounded-3xl p-6 border border-emerald-900/60 shadow-xl space-y-6 hover:border-emerald-700/80 transition-all">
-          
-          <!-- 1. アーティスト ヘッダー (名前 & バッジ) -->
-          <div class="flex items-start justify-between gap-4 border-b border-emerald-950/80 pb-4">
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="px-2.5 py-0.5 bg-emerald-950 border border-emerald-800 text-emerald-300 font-mono text-xs font-bold rounded-full">
-                  #05
-                </span>
-                <span class="text-xs font-mono text-gray-400">[たけだ なのか]</span>
-              </div>
-              <h3 class="text-2xl font-bold font-serif-jp text-white tracking-tight mt-1">
-                武田なのか
-              </h3>
-              <p class="text-xs font-mono text-emerald-400/90 font-medium">
-                Nanoka Takeda
-              </p>
-            </div>
-            <div class="text-right shrink-0">
-              <span class="inline-block px-3 py-1 bg-emerald-900/40 text-emerald-300 border border-emerald-700/50 text-[11px] font-mono rounded-lg">
-                FISC 2026
-              </span>
-            </div>
-          </div>
-
-          <!-- 2. アーティスト写真 (フルサイズ正方形) -->
-          <div class="space-y-2">
-            <div class="relative rounded-2xl overflow-hidden aspect-square border border-emerald-800/60 bg-emerald-950/40 shadow-lg">
-              <img src="assets/slide_photo_4.jpg" alt="武田なのか プロフィール写真" class="w-full h-full object-cover" />
-              <div class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[11px] font-mono text-gray-200">
-                👤 Artist Portrait
-              </div>
-            </div>
-          </div>
-
-          <!-- 3. 作品タイトル & ステートメント (STATEMENT) -->
-          <div class="space-y-3 bg-[#06100b] p-5 rounded-2xl border border-emerald-950/90">
-            <div class="border-b border-emerald-900/50 pb-2">
-              <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-bold">Work Title</div>
-              <div class="text-lg font-bold font-serif-jp text-white">「へびとくも」</div>
-              <div class="text-xs font-sans italic text-gray-400">“Snake and Spider”</div>
-            </div>
-            <div class="space-y-3 pt-1">
-              <div>
-                <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-bold mb-1">Statement</div>
-                <p class="text-xs text-gray-200 leading-relaxed font-serif-jp">
-                  庭園を舞台に、自分が構想している演劇のセットを創作しました。庭園の動物たちに登場してもらえたらうれしいです。
-                </p>
-              </div>
-              <div class="pt-2 border-t border-emerald-950/60">
-                <p class="text-[11px] text-gray-400 leading-relaxed font-sans italic">
-                  Using the garden as a stage, I created a set for a play I have been envisioning. I would be delighted if the garden’s animals made an appearance in it.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 4. 作品写真ギャラリー (STATEMENTとQRコードの間に配置) -->
-          <div id="gallery-05" class="space-y-2.5 bg-[#050e09] p-3.5 rounded-2xl border border-emerald-900/60 shadow-inner">
-            <div class="flex items-center justify-between px-1">
-              <span class="text-[11px] font-mono text-emerald-400 font-bold tracking-wider">🌿 INSTALLATION VIEW // 作品写真 (全5枚)</span>
-              <span class="text-[10px] font-mono text-gray-400">タップで切替・拡大</span>
-            </div>
-            <div class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-700/60 bg-[#040c07] shadow-lg group cursor-pointer" onclick="openLightbox(this.querySelector('img').src, '武田なのか — 「へびとくも」')">
-              <img id="gallery-05-main" src="assets/works/artist_05_1.jpg" alt="武田なのか 「へびとくも」 メイン写真" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
-              <div class="absolute bottom-2.5 left-2.5 bg-black/65 backdrop-blur-md px-2.5 py-1 rounded-lg border border-emerald-500/30 text-[10px] font-serif-jp text-emerald-200">
-                「へびとくも」 <span class="font-sans italic text-gray-300">“Snake and Spider”</span>
-              </div>
-              <div class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md px-2 py-1 rounded-lg border border-white/15 text-[10px] font-mono text-gray-200">
-                🔍 拡大
-              </div>
-            </div>
-            <div class="grid grid-cols-5 gap-1.5 pt-0.5">
-              <button type="button" onclick="switchGalleryPhoto('gallery-05', 'assets/works/artist_05_1.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all ring-2 ring-emerald-400 opacity-100">
-                <img src="assets/works/artist_05_1.jpg" alt="武田なのか 「へびとくも」 写真1" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-05', 'assets/works/artist_05_2.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_05_2.jpg" alt="武田なのか 「へびとくも」 写真2" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-05', 'assets/works/artist_05_3.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_05_3.jpg" alt="武田なのか 「へびとくも」 写真3" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-05', 'assets/works/artist_05_4.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_05_4.jpg" alt="武田なのか 「へびとくも」 写真4" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-05', 'assets/works/artist_05_5.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_05_5.jpg" alt="武田なのか 「へびとくも」 写真5" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-            </div>
-          </div>
-
-          <!-- 5. Instagram QRコード & リンク -->
-          <div class="bg-[#050e09] border border-emerald-900/40 rounded-2xl p-4 flex items-center justify-between gap-4">
-            <div class="flex items-center gap-3.5">
-              <div class="w-14 h-14 bg-white p-1 rounded-xl shrink-0 shadow-md">
-                <img src="assets/qr_codes/nt2_29.png" alt="武田なのか Instagram QR" class="w-full h-full object-contain" />
-              </div>
-              <div>
-                <div class="text-[11px] text-gray-400 font-mono">Official Instagram</div>
-                <div class="text-xs font-mono font-bold text-white">@nt2_29</div>
-                <a href="https://www.instagram.com/nt2_29/" target="_blank" class="inline-block text-[11px] text-emerald-400 hover:text-emerald-300 underline font-mono mt-0.5">
-                  プロフィールを開く →
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Entry #06 : 中林拓巳 -->
-        <article id="artist-06" class="scroll-mt-16 bg-[#08130e] rounded-3xl p-6 border border-emerald-900/60 shadow-xl space-y-6 hover:border-emerald-700/80 transition-all">
-          
-          <!-- 1. アーティスト ヘッダー (名前 & バッジ) -->
-          <div class="flex items-start justify-between gap-4 border-b border-emerald-950/80 pb-4">
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="px-2.5 py-0.5 bg-emerald-950 border border-emerald-800 text-emerald-300 font-mono text-xs font-bold rounded-full">
-                  #06
-                </span>
-                <span class="text-xs font-mono text-gray-400">[なかばやし たくみ]</span>
-              </div>
-              <h3 class="text-2xl font-bold font-serif-jp text-white tracking-tight mt-1">
-                中林拓巳
-              </h3>
-              <p class="text-xs font-mono text-emerald-400/90 font-medium">
-                Takumi Nakabayashi
-              </p>
-            </div>
-            <div class="text-right shrink-0">
-              <span class="inline-block px-3 py-1 bg-emerald-900/40 text-emerald-300 border border-emerald-700/50 text-[11px] font-mono rounded-lg">
-                FISC 2026
-              </span>
-            </div>
-          </div>
-
-          <!-- 2. アーティスト写真 (フルサイズ正方形) -->
-          <div class="space-y-2">
-            <div class="relative rounded-2xl overflow-hidden aspect-square border border-emerald-800/60 bg-emerald-950/40 shadow-lg">
-              <img src="assets/slide_photo_9.jpg" alt="中林拓巳 プロフィール写真" class="w-full h-full object-cover" />
-              <div class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[11px] font-mono text-gray-200">
-                👤 Artist Portrait
-              </div>
-            </div>
-          </div>
-
-          <!-- 3. 作品タイトル & ステートメント (STATEMENT) -->
-          <div class="space-y-3 bg-[#06100b] p-5 rounded-2xl border border-emerald-950/90">
-            <div class="border-b border-emerald-900/50 pb-2">
-              <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-bold">Work Title</div>
-              <div class="text-lg font-bold font-serif-jp text-white">「返礼」</div>
-              <div class="text-xs font-sans italic text-gray-400">“Return”</div>
-            </div>
-            <div class="space-y-3 pt-1">
-              <div>
-                <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-bold mb-1">Statement</div>
-                <p class="text-xs text-gray-200 leading-relaxed font-serif-jp">
-                  雨として空から降った水は、木を伝い、土や砂利、林床へと染み込んでいく。そこでは植物や生き物との関わりを重ねながら湖へと集まり、再び空へ還っていく。この大きな循環に目を向け、地上を巡ってきた水をもう一度空へ返す装置をつくった。
-                </p>
-              </div>
-              <div class="pt-2 border-t border-emerald-950/60">
-                <p class="text-[11px] text-gray-400 leading-relaxed font-sans italic">
-                  Water falls from the sky as rain, travels down the trees, and seeps into the soil, gravel, and forest floor. Along the way, it interacts with plants and other living things before gathering in the lake and eventually returning to the sky. Focusing on this vast cycle, I created a device that returns to the sky the water that has journeyed across the earth.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 4. 作品写真ギャラリー (STATEMENTとQRコードの間に配置) -->
-          <div id="gallery-06" class="space-y-2.5 bg-[#050e09] p-3.5 rounded-2xl border border-emerald-900/60 shadow-inner">
-            <div class="flex items-center justify-between px-1">
-              <span class="text-[11px] font-mono text-emerald-400 font-bold tracking-wider">🌿 INSTALLATION VIEW // 作品写真 (全5枚)</span>
-              <span class="text-[10px] font-mono text-gray-400">タップで切替・拡大</span>
-            </div>
-            <div class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-700/60 bg-[#040c07] shadow-lg group cursor-pointer" onclick="openLightbox(this.querySelector('img').src, '中林拓巳 — 「返礼」')">
-              <img id="gallery-06-main" src="assets/works/artist_06_1.jpg" alt="中林拓巳 「返礼」 メイン写真" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
-              <div class="absolute bottom-2.5 left-2.5 bg-black/65 backdrop-blur-md px-2.5 py-1 rounded-lg border border-emerald-500/30 text-[10px] font-serif-jp text-emerald-200">
-                「返礼」 <span class="font-sans italic text-gray-300">“Return”</span>
-              </div>
-              <div class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md px-2 py-1 rounded-lg border border-white/15 text-[10px] font-mono text-gray-200">
-                🔍 拡大
-              </div>
-            </div>
-            <div class="grid grid-cols-5 gap-1.5 pt-0.5">
-              <button type="button" onclick="switchGalleryPhoto('gallery-06', 'assets/works/artist_06_1.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all ring-2 ring-emerald-400 opacity-100">
-                <img src="assets/works/artist_06_1.jpg" alt="中林拓巳 「返礼」 写真1" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-06', 'assets/works/artist_06_2.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_06_2.jpg" alt="中林拓巳 「返礼」 写真2" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-06', 'assets/works/artist_06_3.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_06_3.jpg" alt="中林拓巳 「返礼」 写真3" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-06', 'assets/works/artist_06_4.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_06_4.jpg" alt="中林拓巳 「返礼」 写真4" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-06', 'assets/works/artist_06_5.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_06_5.jpg" alt="中林拓巳 「返礼」 写真5" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-            </div>
-          </div>
-
-          <!-- 5. Instagram QRコード & リンク -->
-          <div class="bg-[#050e09] border border-emerald-900/40 rounded-2xl p-4 flex items-center justify-between gap-4">
-            <div class="flex items-center gap-3.5">
-              <div class="w-14 h-14 bg-white p-1 rounded-xl shrink-0 shadow-md">
-                <img src="assets/qr_codes/west18kara.png" alt="中林拓巳 Instagram QR" class="w-full h-full object-contain" />
-              </div>
-              <div>
-                <div class="text-[11px] text-gray-400 font-mono">Official Instagram</div>
-                <div class="text-xs font-mono font-bold text-white">@west18kara</div>
-                <a href="https://www.instagram.com/west18kara/" target="_blank" class="inline-block text-[11px] text-emerald-400 hover:text-emerald-300 underline font-mono mt-0.5">
-                  プロフィールを開く →
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Entry #07 : 水野 夏 -->
-        <article id="artist-07" class="scroll-mt-16 bg-[#08130e] rounded-3xl p-6 border border-emerald-900/60 shadow-xl space-y-6 hover:border-emerald-700/80 transition-all">
-          
-          <!-- 1. アーティスト ヘッダー (名前 & バッジ) -->
-          <div class="flex items-start justify-between gap-4 border-b border-emerald-950/80 pb-4">
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="px-2.5 py-0.5 bg-emerald-950 border border-emerald-800 text-emerald-300 font-mono text-xs font-bold rounded-full">
-                  #07
-                </span>
-                <span class="text-xs font-mono text-gray-400">[みずの なつ]</span>
-              </div>
-              <h3 class="text-2xl font-bold font-serif-jp text-white tracking-tight mt-1">
-                水野 夏
-              </h3>
-              <p class="text-xs font-mono text-emerald-400/90 font-medium">
-                Natsu Mizuno
-              </p>
-            </div>
-            <div class="text-right shrink-0">
-              <span class="inline-block px-3 py-1 bg-emerald-900/40 text-emerald-300 border border-emerald-700/50 text-[11px] font-mono rounded-lg">
-                FISC 2026
-              </span>
-            </div>
-          </div>
-
-          <!-- 2. アーティスト写真 (フルサイズ正方形) -->
-          <div class="space-y-2">
-            <div class="relative rounded-2xl overflow-hidden aspect-square border border-emerald-800/60 bg-emerald-950/40 shadow-lg">
-              <img src="assets/slide_photo_7.jpg" alt="水野 夏 プロフィール写真" class="w-full h-full object-cover" />
-              <div class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[11px] font-mono text-gray-200">
-                👤 Artist Portrait
-              </div>
-            </div>
-          </div>
-
-          <!-- 3. 作品タイトル & ステートメント (STATEMENT) -->
-          <div class="space-y-3 bg-[#06100b] p-5 rounded-2xl border border-emerald-950/90">
-            <div class="border-b border-emerald-900/50 pb-2">
-              <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-bold">Work Title</div>
-              <div class="text-lg font-bold font-serif-jp text-white">「1070.43」</div>
-              <div class="text-xs font-sans italic text-gray-400">“1070.43”</div>
-            </div>
-            <div class="space-y-3 pt-1">
-              <div>
-                <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-bold mb-1">Statement</div>
-                <p class="text-xs text-gray-200 leading-relaxed font-serif-jp">
-                  庭園の中で、太陽の光を作品を通して感じてもらうために、日時計を制作しました。作品に落ちる影を見つめることをきっかけに、ふと上を見上げ、庭園に広がる美しい木々にも目を向けていただきたいです。
-                </p>
-              </div>
-              <div class="pt-2 border-t border-emerald-950/60">
-                <p class="text-[11px] text-gray-400 leading-relaxed font-sans italic">
-                  I made a sundial so that visitors could feel the sunlight through the work as they move through the garden. Watching the shadow it casts, I hope you’ll look up, if only for a moment, and turn your eyes to the beautiful trees spreading across the garden.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 4. 作品写真ギャラリー (STATEMENTとQRコードの間に配置) -->
-          <div id="gallery-07" class="space-y-2.5 bg-[#050e09] p-3.5 rounded-2xl border border-emerald-900/60 shadow-inner">
-            <div class="flex items-center justify-between px-1">
-              <span class="text-[11px] font-mono text-emerald-400 font-bold tracking-wider">🌿 INSTALLATION VIEW // 作品写真 (全5枚)</span>
-              <span class="text-[10px] font-mono text-gray-400">タップで切替・拡大</span>
-            </div>
-            <div class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-700/60 bg-[#040c07] shadow-lg group cursor-pointer" onclick="openLightbox(this.querySelector('img').src, '水野 夏 — 「1070.43」')">
-              <img id="gallery-07-main" src="assets/works/artist_07_1.jpg" alt="水野 夏 「1070.43」 メイン写真" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
-              <div class="absolute bottom-2.5 left-2.5 bg-black/65 backdrop-blur-md px-2.5 py-1 rounded-lg border border-emerald-500/30 text-[10px] font-serif-jp text-emerald-200">
-                「1070.43」 <span class="font-sans italic text-gray-300">“1070.43”</span>
-              </div>
-              <div class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md px-2 py-1 rounded-lg border border-white/15 text-[10px] font-mono text-gray-200">
-                🔍 拡大
-              </div>
-            </div>
-            <div class="grid grid-cols-5 gap-1.5 pt-0.5">
-              <button type="button" onclick="switchGalleryPhoto('gallery-07', 'assets/works/artist_07_1.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all ring-2 ring-emerald-400 opacity-100">
-                <img src="assets/works/artist_07_1.jpg" alt="水野 夏 「1070.43」 写真1" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-07', 'assets/works/artist_07_2.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_07_2.jpg" alt="水野 夏 「1070.43」 写真2" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-07', 'assets/works/artist_07_3.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_07_3.jpg" alt="水野 夏 「1070.43」 写真3" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-07', 'assets/works/artist_07_4.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_07_4.jpg" alt="水野 夏 「1070.43」 写真4" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-07', 'assets/works/artist_07_5.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_07_5.jpg" alt="水野 夏 「1070.43」 写真5" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-            </div>
-          </div>
-
-          <!-- 5. Instagram QRコード & リンク -->
-          <div class="bg-[#050e09] border border-emerald-900/40 rounded-2xl p-4 flex items-center justify-between gap-4">
-            <div class="flex items-center gap-3.5">
-              <div class="w-14 h-14 bg-white p-1 rounded-xl shrink-0 shadow-md">
-                <img src="assets/qr_codes/2001_na2.png" alt="水野 夏 Instagram QR" class="w-full h-full object-contain" />
-              </div>
-              <div>
-                <div class="text-[11px] text-gray-400 font-mono">Official Instagram</div>
-                <div class="text-xs font-mono font-bold text-white">@2001_na2</div>
-                <a href="https://www.instagram.com/2001_na2/" target="_blank" class="inline-block text-[11px] text-emerald-400 hover:text-emerald-300 underline font-mono mt-0.5">
-                  プロフィールを開く →
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Entry #08 : 渡邉光子 -->
-        <article id="artist-08" class="scroll-mt-16 bg-[#08130e] rounded-3xl p-6 border border-emerald-900/60 shadow-xl space-y-6 hover:border-emerald-700/80 transition-all">
-          
-          <!-- 1. アーティスト ヘッダー (名前 & バッジ) -->
-          <div class="flex items-start justify-between gap-4 border-b border-emerald-950/80 pb-4">
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="px-2.5 py-0.5 bg-emerald-950 border border-emerald-800 text-emerald-300 font-mono text-xs font-bold rounded-full">
-                  #08
-                </span>
-                <span class="text-xs font-mono text-gray-400">[わたなべ みつこ]</span>
-              </div>
-              <h3 class="text-2xl font-bold font-serif-jp text-white tracking-tight mt-1">
-                渡邉光子
-              </h3>
-              <p class="text-xs font-mono text-emerald-400/90 font-medium">
-                Mitsuko Watanabe
-              </p>
-            </div>
-            <div class="text-right shrink-0">
-              <span class="inline-block px-3 py-1 bg-emerald-900/40 text-emerald-300 border border-emerald-700/50 text-[11px] font-mono rounded-lg">
-                FISC 2026
-              </span>
-            </div>
-          </div>
-
-          <!-- 2. アーティスト写真 (フルサイズ正方形) -->
-          <div class="space-y-2">
-            <div class="relative rounded-2xl overflow-hidden aspect-square border border-emerald-800/60 bg-emerald-950/40 shadow-lg">
-              <img src="assets/slide_photo_2.jpg?v=260830" alt="渡邉光子 プロフィール写真" class="w-full h-full object-cover" />
-              <div class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[11px] font-mono text-gray-200">
-                👤 Artist Portrait
-              </div>
-            </div>
-          </div>
-
-          <!-- 3. 作品タイトル & ステートメント (STATEMENT) -->
-          <div class="space-y-3 bg-[#06100b] p-5 rounded-2xl border border-emerald-950/90">
-            <div class="border-b border-emerald-900/50 pb-2">
-              <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-bold">Work Title</div>
-              <div class="text-lg font-bold font-serif-jp text-white">「人はみな言葉でできた、庭だから」</div>
-              <div class="text-xs font-sans italic text-gray-400">“Because We Are All Gardens Made of Words”</div>
-            </div>
-            <div class="space-y-3 pt-1">
-              <div>
-                <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-bold mb-1">Statement</div>
-                <p class="text-xs text-gray-200 leading-relaxed font-serif-jp">
-                  この庭園は、人の手で愛情たっぷりに育てられたみどりたちで覆われている。これは人の言葉に似ていると思った。人は言葉でできている庭だ。庭園の植物や土を採集させてもらい、絵の具にして庭園の音や言葉をイメージして、絵の世界と庭園のみどりの世界どちらにも没入できるようにミラーの上に描いた。窓の外から下を覗くと水草が集まっていて、そこに言葉を描いた透明なフィルムを浮かべることで、人の中にある「ことのは」を庭園のみどりの一部にすることができる。
-                </p>
-              </div>
-              <div class="pt-2 border-t border-emerald-950/60">
-                <p class="text-[11px] text-gray-400 leading-relaxed font-sans italic">
-                  This garden is covered in greenery, tended with great care by human hands — much like language itself, I thought: people are gardens made of words. Using plants and soil collected from the garden as pigment, I painted onto a mirror to evoke the garden’s sounds and words, so that the world of the painting and the garden’s greenery could merge. Looking down through a window, water plants gather below; floating clear film inscribed with words among them lets the words within us become part of the garden’s green world.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 4. 作品写真ギャラリー (STATEMENTとQRコードの間に配置) -->
-          <div id="gallery-08" class="space-y-2.5 bg-[#050e09] p-3.5 rounded-2xl border border-emerald-900/60 shadow-inner">
-            <div class="flex items-center justify-between px-1">
-              <span class="text-[11px] font-mono text-emerald-400 font-bold tracking-wider">🌿 INSTALLATION VIEW // 作品写真 (全5枚)</span>
-              <span class="text-[10px] font-mono text-gray-400">タップで切替・拡大</span>
-            </div>
-            <div class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-700/60 bg-[#040c07] shadow-lg group cursor-pointer" onclick="openLightbox(this.querySelector('img').src, '渡邉光子 — 「人はみな言葉でできた、庭だから」')">
-              <img id="gallery-08-main" src="assets/works/artist_08_1.jpg" alt="渡邉光子 「人はみな言葉でできた、庭だから」 メイン写真" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
-              <div class="absolute bottom-2.5 left-2.5 bg-black/65 backdrop-blur-md px-2.5 py-1 rounded-lg border border-emerald-500/30 text-[10px] font-serif-jp text-emerald-200">
-                「人はみな言葉でできた、庭だから」 <span class="font-sans italic text-gray-300">“Because We Are All Gardens Made of Words”</span>
-              </div>
-              <div class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md px-2 py-1 rounded-lg border border-white/15 text-[10px] font-mono text-gray-200">
-                🔍 拡大
-              </div>
-            </div>
-            <div class="grid grid-cols-5 gap-1.5 pt-0.5">
-              <button type="button" onclick="switchGalleryPhoto('gallery-08', 'assets/works/artist_08_1.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all ring-2 ring-emerald-400 opacity-100">
-                <img src="assets/works/artist_08_1.jpg" alt="渡邉光子 「人はみな言葉でできた、庭だから」 写真1" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-08', 'assets/works/artist_08_2.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_08_2.jpg" alt="渡邉光子 「人はみな言葉でできた、庭だから」 写真2" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-08', 'assets/works/artist_08_3.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_08_3.jpg" alt="渡邉光子 「人はみな言葉でできた、庭だから」 写真3" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-08', 'assets/works/artist_08_4.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_08_4.jpg" alt="渡邉光子 「人はみな言葉でできた、庭だから」 写真4" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-              <button type="button" onclick="switchGalleryPhoto('gallery-08', 'assets/works/artist_08_5.jpg', this)" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all opacity-75 hover:opacity-100">
-                <img src="assets/works/artist_08_5.jpg" alt="渡邉光子 「人はみな言葉でできた、庭だから」 写真5" loading="lazy" class="w-full h-full object-cover" />
-              </button>
-            </div>
-          </div>
-
-          <!-- 5. Instagram QRコード & リンク -->
-          <div class="bg-[#050e09] border border-emerald-900/40 rounded-2xl p-4 flex items-center justify-between gap-4">
-            <div class="flex items-center gap-3.5">
-              <div class="w-14 h-14 bg-white p-1 rounded-xl shrink-0 shadow-md">
-                <img src="assets/qr_codes/32o_watanabe.png" alt="渡邉光子 Instagram QR" class="w-full h-full object-contain" />
-              </div>
-              <div>
-                <div class="text-[11px] text-gray-400 font-mono">Official Instagram</div>
-                <div class="text-xs font-mono font-bold text-white">@32o_watanabe</div>
-                <a href="https://www.instagram.com/32o_watanabe/" target="_blank" class="inline-block text-[11px] text-emerald-400 hover:text-emerald-300 underline font-mono mt-0.5">
-                  プロフィールを開く →
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-      </div>
-
+      <div id="works-list" class="space-y-12"></div>
+    </section>
 
     <!-- VENUE & ACCESS SECTION -->
-    <section id="access" class="bg-dark-card rounded-3xl p-6 border border-emerald-900/60 space-y-6">
+    <section id="access" class="scroll-mt-16 bg-dark-card rounded-3xl p-6 border border-emerald-900/60 space-y-6">
       <div class="flex items-center justify-between border-b border-emerald-950 pb-2">
         <div class="text-[10px] font-mono text-emerald-400 font-bold">// VENUE & ACCESS</div>
         <span class="text-[10px] font-mono text-gray-400">真鍋庭園情報</span>
@@ -1075,7 +147,7 @@
         <h2 class="text-xl font-bold font-serif-jp text-white">真鍋庭園 MANABE GARDEN</h2>
 
         <div class="relative rounded-2xl overflow-hidden h-40 border border-emerald-950 shadow-md">
-          <img src="assets/ig_photo1.jpg" alt="真鍋庭園 アクセス" class="w-full h-full object-cover">
+          <img src="assets/ig_photo1.jpg" alt="真鍋庭園 アクセス" loading="lazy" decoding="async" class="w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4 flex items-end">
             <span class="text-xs text-emerald-300 font-mono bg-black/70 px-2.5 py-1 rounded-md backdrop-blur border border-emerald-900/60">
               🌲 帯広市・真鍋庭園 森のオープンギャラリー「大きな木」
@@ -1089,29 +161,9 @@
             <span class="text-[10px] font-mono text-emerald-400 font-bold">// MANABE GARDEN VIEWS (現地風景・タップで拡大)</span>
             <span class="text-[10px] font-mono text-gray-500">6 PHOTOS</span>
           </div>
-          <div class="grid grid-cols-3 gap-2">
-            <div class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-900/70 bg-[#040c07] cursor-pointer group" onclick="openLightbox('assets/works/venue_01.jpg', '真鍋庭園 紅葉と番傘')">
-              <img src="assets/works/venue_01.jpg" alt="真鍋庭園 紅葉と番傘" loading="lazy" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-            </div>
-            <div class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-900/70 bg-[#040c07] cursor-pointer group" onclick="openLightbox('assets/works/venue_02.jpg', '森のオープンギャラリー「大きな木」案内看板')">
-              <img src="assets/works/venue_02.jpg" alt="森のオープンギャラリー「大きな木」案内看板" loading="lazy" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-            </div>
-            <div class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-900/70 bg-[#040c07] cursor-pointer group" onclick="openLightbox('assets/works/venue_03.jpg', 'ギャラリー誘導サイン')">
-              <img src="assets/works/venue_03.jpg" alt="ギャラリー誘導サイン" loading="lazy" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-            </div>
-            <div class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-900/70 bg-[#040c07] cursor-pointer group" onclick="openLightbox('assets/works/venue_04.jpg', '日本庭園の紅葉')">
-              <img src="assets/works/venue_04.jpg" alt="日本庭園の紅葉" loading="lazy" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-            </div>
-            <div class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-900/70 bg-[#040c07] cursor-pointer group" onclick="openLightbox('assets/works/venue_05.jpg', 'コニファーガーデン')">
-              <img src="assets/works/venue_05.jpg" alt="コニファーガーデン" loading="lazy" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-            </div>
-            <div class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-900/70 bg-[#040c07] cursor-pointer group" onclick="openLightbox('assets/works/venue_06.jpg', '真鍋庭園 ウェルカムゲート')">
-              <img src="assets/works/venue_06.jpg" alt="真鍋庭園 ウェルカムゲート" loading="lazy" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-            </div>
-          </div>
+          <div id="venue-gallery-grid" class="grid grid-cols-3 gap-2"></div>
         </div>
 
-        
         <div class="text-xs text-gray-300 leading-relaxed space-y-2 font-mono bg-[#040c07] p-4 rounded-2xl border border-emerald-950">
           <p class="font-bold text-white flex items-center gap-1.5">
             <span class="text-emerald-400">📍</span> 住所: 北海道帯広市稲田町東2線6番地
@@ -1128,71 +180,48 @@
       <!-- 公式リンク集（HP & Instagram） -->
       <div id="links" class="scroll-mt-20 space-y-3 pt-1">
         <div class="text-[11px] font-mono text-emerald-400 font-bold tracking-wider">// OFFICIAL LINKS</div>
-        
-        <!-- 1. 森のオープンギャラリー「大きな木」特設サイト (Wix) -->
         <a href="https://opengallaery.wixsite.com/ookinaki/%E8%A4%87%E8%A3%BD-autumn-2018" target="_blank" class="flex items-center justify-between p-4 bg-[#050e09] hover:bg-emerald-950/40 border border-emerald-500/40 hover:border-emerald-400 rounded-2xl transition-all group shadow-md">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-emerald-900/80 border border-emerald-500/50 flex items-center justify-center text-lg text-emerald-300 shrink-0">
-              🌳
-            </div>
+            <div class="w-10 h-10 rounded-xl bg-emerald-900/80 border border-emerald-500/50 flex items-center justify-center text-lg text-emerald-300 shrink-0">🌳</div>
             <div>
               <div class="text-xs font-bold font-serif-jp text-white group-hover:text-emerald-300 transition-colors">森のオープンギャラリー「大きな木」特設サイト</div>
               <div class="text-[10px] font-mono text-emerald-400/90 truncate max-w-[200px]">opengallaery.wixsite.com/ookinaki</div>
             </div>
           </div>
-          <span class="text-xs font-mono text-emerald-400 group-hover:translate-x-0.5 transition-transform shrink-0">
-            特設サイトを開く →
-          </span>
+          <span class="text-xs font-mono text-emerald-400 group-hover:translate-x-0.5 transition-transform shrink-0">特設サイトを開く →</span>
         </a>
-
-        <!-- 2. 真鍋庭園 公式ホームページ -->
         <a href="http://www.manabegarden.jp" target="_blank" class="flex items-center justify-between p-4 bg-[#050e09] hover:bg-emerald-950/40 border border-emerald-900/60 hover:border-emerald-500/60 rounded-2xl transition-all group shadow-sm">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-emerald-950 border border-emerald-800 flex items-center justify-center text-lg text-emerald-300 shrink-0">
-              🌐
-            </div>
+            <div class="w-10 h-10 rounded-xl bg-emerald-950 border border-emerald-800 flex items-center justify-center text-lg text-emerald-300 shrink-0">🌐</div>
             <div>
               <div class="text-xs font-bold font-serif-jp text-white group-hover:text-emerald-300 transition-colors">真鍋庭園 公式ホームページ</div>
               <div class="text-[10px] font-mono text-gray-400">www.manabegarden.jp</div>
             </div>
           </div>
-          <span class="text-xs font-mono text-emerald-400 group-hover:translate-x-0.5 transition-transform">
-            Webサイトを開く →
-          </span>
+          <span class="text-xs font-mono text-emerald-400 group-hover:translate-x-0.5 transition-transform">Webサイトを開く →</span>
         </a>
-
-        <!-- 3. 真鍋庭園 公式Instagram -->
         <a href="https://www.instagram.com/manabegarden/" target="_blank" class="flex items-center justify-between p-4 bg-[#050e09] hover:bg-emerald-950/40 border border-emerald-900/60 hover:border-emerald-500/60 rounded-2xl transition-all group shadow-sm">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-yellow-500/20 via-pink-500/20 to-purple-500/20 border border-pink-500/30 flex items-center justify-center text-lg text-pink-300 shrink-0">
-              📸
-            </div>
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-yellow-500/20 via-pink-500/20 to-purple-500/20 border border-pink-500/30 flex items-center justify-center text-lg text-pink-300 shrink-0">📸</div>
             <div>
               <div class="text-xs font-bold font-serif-jp text-white group-hover:text-emerald-300 transition-colors">真鍋庭園 公式Instagram</div>
               <div class="text-[10px] font-mono text-pink-400 font-bold">@manabegarden</div>
             </div>
           </div>
-          <span class="text-xs font-mono text-emerald-400 group-hover:translate-x-0.5 transition-transform">
-            Instagramを開く →
-          </span>
+          <span class="text-xs font-mono text-emerald-400 group-hover:translate-x-0.5 transition-transform">Instagramを開く →</span>
         </a>
-
-        <!-- 4. Field Installation 公式Instagram (QR付き) -->
         <div class="bg-[#050e09] p-4 rounded-2xl border border-emerald-900/60 flex items-center gap-4">
           <a href="https://www.instagram.com/fieldinstallation/" target="_blank" class="bg-white p-1.5 rounded-xl shrink-0 shadow-md">
-            <img src="assets/qr_codes/fieldinstallation.png" alt="Field Installation QR" class="w-12 h-12 object-contain">
+            <img src="assets/qr_codes/fieldinstallation.png" alt="Field Installation QR" loading="lazy" decoding="async" class="w-12 h-12 object-contain">
           </a>
           <div class="text-xs space-y-0.5 font-mono min-w-0">
             <div class="font-bold text-white font-serif-jp truncate">Field Installation 公式Instagram</div>
             <div class="text-[10px] text-emerald-400 font-bold">@fieldinstallation</div>
-            <a href="https://www.instagram.com/fieldinstallation/" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-400 hover:text-emerald-300 underline pt-0.5">
-              <span>イベント公式を開く →</span>
-            </a>
+            <a href="https://www.instagram.com/fieldinstallation/" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-400 hover:text-emerald-300 underline pt-0.5"><span>イベント公式を開く →</span></a>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="max-w-md mx-auto px-4 py-8 text-center text-xs text-gray-500 font-mono border-t border-emerald-950 mt-8 space-y-2">
@@ -1201,32 +230,213 @@
     <div class="text-[10px] text-gray-600 pt-2">© 2026 Field Installation & MANABE GARDEN. All Rights Reserved.</div>
   </footer>
 
+  <!-- Floating Back-to-Index Button -->
+  <a id="back-to-index-btn" href="#quick-index" aria-label="作家インデックスへ戻る" class="fixed bottom-5 right-4 z-40 hidden items-center gap-1.5 px-3.5 py-2.5 rounded-full bg-emerald-950/95 hover:bg-emerald-800 text-emerald-300 border border-emerald-500/60 shadow-2xl backdrop-blur-md text-xs font-mono font-bold transition-all">↑ INDEX</a>
 
   <!-- Lightbox Modal for Full-Screen Photo View -->
-  <div id="photo-lightbox" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-md flex-col items-center justify-center p-4" onclick="closeLightbox()">
-    <div class="max-w-3xl w-full space-y-3" onclick="event.stopPropagation()">
-      <div class="flex items-center justify-between text-xs font-mono text-emerald-300 px-1">
-        <span id="lightbox-caption" class="font-serif-jp text-sm text-white font-bold"></span>
-        <button type="button" onclick="closeLightbox()" class="px-3 py-1 rounded-full bg-emerald-950 border border-emerald-700 text-emerald-300 hover:bg-emerald-800">
-          ✕ 閉じる
-        </button>
+  <div id="photo-lightbox" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-md flex-col items-center justify-center p-4">
+    <div class="max-w-3xl w-full space-y-3">
+      <div class="flex items-center justify-between text-xs font-mono text-emerald-300 px-1 gap-2">
+        <span id="lightbox-caption" class="font-serif-jp text-sm text-white font-bold truncate"></span>
+        <div class="flex items-center gap-2 shrink-0">
+          <span id="lightbox-counter" class="text-[11px] font-mono text-emerald-300/90 bg-emerald-950/80 px-2.5 py-0.5 rounded-full border border-emerald-800/80"></span>
+          <button type="button" data-close-lightbox class="px-3 py-1 rounded-full bg-emerald-950 border border-emerald-700 text-emerald-300 hover:bg-emerald-800">✕ 閉じる</button>
+        </div>
       </div>
-      <div class="rounded-2xl overflow-hidden border border-emerald-800/80 bg-[#050B08] shadow-2xl">
-        <img id="lightbox-img" src="" alt="拡大写真" class="w-full max-h-[78vh] object-contain mx-auto" />
+      <div class="relative rounded-2xl overflow-hidden border border-emerald-800/80 bg-[#050B08] shadow-2xl">
+        <img id="lightbox-img" src="" alt="拡大写真" decoding="async" class="w-full max-h-[78vh] object-contain mx-auto select-none" />
+        <button id="lightbox-prev" type="button" data-lightbox-step="-1" aria-label="前の写真" class="absolute left-2.5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/65 hover:bg-emerald-900/90 border border-emerald-500/40 text-emerald-200 flex items-center justify-center text-sm font-mono shadow-lg backdrop-blur-md transition-all">◀</button>
+        <button id="lightbox-next" type="button" data-lightbox-step="1" aria-label="次の写真" class="absolute right-2.5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/65 hover:bg-emerald-900/90 border border-emerald-500/40 text-emerald-200 flex items-center justify-center text-sm font-mono shadow-lg backdrop-blur-md transition-all">▶</button>
       </div>
     </div>
   </div>
 
+  <!-- Data & Synchronous Renderer -->
   <script>
+    const ARTISTS_DATA = [
+      { id: '01', nameJp: '赤木ミライ', furigana: '[あかぎ みらい]', nameEn: 'Mirai Akagi', portrait: 'assets/slide_photo_1.jpg', titleJp: '「仮住まい」', titleEn: '“A Temporary Dwelling”',
+        statementJp: '庭園という人間によって管理された自然の中に、一時的な「仮住まい」を出現させることで、人間と自然の距離、そして「自分の居場所とは何か」を問い直す。',
+        statementEn: 'By bringing a temporary “dwelling” into being within the garden — nature managed by human hands — this work questions the distance between people and nature, and asks what it means to have a place of one’s own.',
+        igHandle: 'mirai_ef65', qrImg: 'assets/qr_codes/mirai_ef65.png', photos: ['assets/works/artist_01_1.jpg', 'assets/works/artist_01_2.jpg', 'assets/works/artist_01_3.jpg', 'assets/works/artist_01_4.jpg', 'assets/works/artist_01_5.jpg'] },
+      { id: '02', nameJp: 'アザミユウカ', furigana: '[あざみ ゆうか]', nameEn: 'Yuuka Azami', portrait: 'assets/slide_photo_8.jpg', titleJp: '「庭の中の布」', titleEn: '“Cloth in the Garden”',
+        statementJp: '空間に布を張り、キャンバスに見立てる。その向こうの景色を絵の具として取り込み、布の揺らぎや鑑賞者の動きなどによって常に異なる表情を見せる「色のない絵画」。',
+        statementEn: 'A length of cloth is stretched across the space, standing in for a canvas. The scenery beyond becomes its pigment — a “colorless painting” whose expression keeps shifting with the sway of the cloth and the movement of the viewer.',
+        igHandle: 'azami_1105_', qrImg: 'assets/qr_codes/azami_1105_.png', photos: ['assets/works/artist_02_1.jpg', 'assets/works/artist_02_2.jpg', 'assets/works/artist_02_3.jpg', 'assets/works/artist_02_4.jpg', 'assets/works/artist_01_5.jpg'] },
+      { id: '03', nameJp: '清水日菜乃', furigana: '[しみず ひなの]', nameEn: 'Hinano Shimizu', portrait: 'assets/slide_photo_3.jpg', titleJp: '「穏やかな日」', titleEn: '“A Quiet Day”',
+        statementJp: '池にいる鴨と一緒に浮かぶ夢を叶える',
+        statementEn: 'A dream of floating alongside the ducks on the pond, come true.',
+        igHandle: 'sculpture_432', qrImg: 'assets/qr_codes/sculpture_432.png', photos: ['assets/works/artist_03_1.jpg', 'assets/works/artist_03_2.jpg', 'assets/works/artist_03_3.jpg', 'assets/works/artist_03_4.jpg', 'assets/works/artist_03_5.jpg'] },
+      { id: '04', nameJp: '髙野友希', furigana: '[たかの ともき]', nameEn: 'Tomoki Takano', portrait: 'assets/slide_photo_5.jpg', titleJp: '「羽衣」 / 「思うがままに」', titleEn: '“Hagoromo (Celestial Robe)” / “As the Heart Desires”',
+        statementJp: '【羽衣】光り輝く木漏れ日によって天国のように思えた真鍋庭園に、天女の羽衣のような柔らかくしなやかな作品を作りました。<br><br>【思うがままに】一面浮き草に覆われた広い池を見た時に、ここをキャンバスにして絵を描きたいと思いました。そこから真っ白なスケートリンクに自由に軌跡を描いていくフィギアスケーターを作ろうと思いたちました。',
+        statementEn: '“Hagoromo”: Manabe Garden, alight with glittering dappled sunlight, felt like heaven to me — so I made a work as soft and supple as a celestial maiden’s feathered robe.<br><br>“As the Heart Desires”: When I saw the wide pond covered entirely in duckweed, I wanted to turn it into a canvas and paint on it. That inspired me to create a figure skater, freely tracing trajectories across a pure white skating rink.',
+        igHandle: 'tomoki__takano', qrImg: 'assets/qr_codes/tomoki__takano.png',
+        subWorks: [
+          { subId: '1', headerLabel: '🌿 WORK 01 // 「羽衣」 “Hagoromo”', titleJp: '「羽衣」', titleEn: '“Hagoromo (Celestial Robe)”', photos: ['assets/works/artist_04_w1_1.jpg', 'assets/works/artist_04_w1_2.jpg', 'assets/works/artist_04_w1_3.jpg'] },
+          { subId: '2', headerLabel: '🌿 WORK 02 // 「思うがままに」 “As the Heart Desires”', titleJp: '「思うがままに」', titleEn: '“As the Heart Desires”', photos: ['assets/works/artist_04_w2_1.jpg', 'assets/works/artist_04_w2_2.jpg', 'assets/works/artist_04_w2_3.jpg'] }
+        ] },
+      { id: '05', nameJp: '武田なのか', furigana: '[たけだ なのか]', nameEn: 'Nanoka Takeda', portrait: 'assets/slide_photo_4.jpg', titleJp: '「へびとくも」', titleEn: '“Snake and Spider”',
+        statementJp: '庭園を舞台に、自分が構想している演劇のセットを創作しました。庭園の動物たちに登場してもらえたらうれしいです。',
+        statementEn: 'Using the garden as a stage, I created a set for a play I have been envisioning. I would be delighted if the garden’s animals made an appearance in it.',
+        igHandle: 'nt2_29', qrImg: 'assets/qr_codes/nt2_29.png', photos: ['assets/works/artist_05_1.jpg', 'assets/works/artist_05_2.jpg', 'assets/works/artist_05_3.jpg', 'assets/works/artist_05_4.jpg', 'assets/works/artist_05_5.jpg'] },
+      { id: '06', nameJp: '中林拓巳', furigana: '[なかばやし たくみ]', nameEn: 'Takumi Nakabayashi', portrait: 'assets/slide_photo_9.jpg', titleJp: '「返礼」', titleEn: '“Return”',
+        statementJp: '雨として空から降った水は、木を伝い、土や砂利、林床へと染み込んでいく。そこでは植物や生き物との関わりを重ねながら湖へと集まり、再び空へ還っていく。この大きな循環に目を向け、地上を巡ってきた水をもう一度空へ返す装置をつくった。',
+        statementEn: 'Water falls from the sky as rain, travels down the trees, and seeps into the soil, gravel, and forest floor. Along the way, it interacts with plants and other living things before gathering in the lake and eventually returning to the sky. Focusing on this vast cycle, I created a device that returns to the sky the water that has journeyed across the earth.',
+        igHandle: 'west18kara', qrImg: 'assets/qr_codes/west18kara.png', photos: ['assets/works/artist_06_1.jpg', 'assets/works/artist_06_2.jpg', 'assets/works/artist_06_3.jpg', 'assets/works/artist_06_4.jpg', 'assets/works/artist_06_5.jpg'] },
+      { id: '07', nameJp: '水野 夏', furigana: '[みずの なつ]', nameEn: 'Natsu Mizuno', portrait: 'assets/slide_photo_7.jpg', titleJp: '「1070.43」', titleEn: '“1070.43”',
+        statementJp: '庭園の中で、太陽の光を作品を通して感じてもらうために、日時計を制作しました。作品に落ちる影を見つめることをきっかけに、ふと上を見上げ、庭園に広がる美しい木々にも目を向けていただきたいです。',
+        statementEn: 'I made a sundial so that visitors could feel the sunlight through the work as they move through the garden. Watching the shadow it casts, I hope you’ll look up, if only for a moment, and turn your eyes to the beautiful trees spreading across the garden.',
+        igHandle: '2001_na2', qrImg: 'assets/qr_codes/2001_na2.png', photos: ['assets/works/artist_07_1.jpg', 'assets/works/artist_07_2.jpg', 'assets/works/artist_07_3.jpg', 'assets/works/artist_07_4.jpg', 'assets/works/artist_07_5.jpg'] },
+      { id: '08', nameJp: '渡邉光子', furigana: '[わたなべ みつこ]', nameEn: 'Mitsuko Watanabe', portrait: 'assets/slide_photo_2.jpg?v=260830', titleJp: '「人はみな言葉でできた、庭だから」', titleEn: '“Because We Are All Gardens Made of Words”',
+        statementJp: 'この庭園は、人の手で愛情たっぷりに育てられたみどりたちで覆われている。これは人の言葉に似ていると思った。人は言葉でできている庭だ。庭園の植物や土を採集させてもらい、絵の具にして庭園の音や言葉をイメージして、絵の世界と庭園のみどりの世界どちらにも没入できるようにミラーの上に描いた。窓の外から下を覗くと水草が集まっていて、そこに言葉を描いた透明なフィルムを浮かべることで、人の中にある「ことのは」を庭園のみどりの一部にすることができる。',
+        statementEn: 'This garden is covered in greenery, tended with great care by human hands — much like language itself, I thought: people are gardens made of words. Using plants and soil collected from the garden as pigment, I painted onto a mirror to evoke the garden’s sounds and words, so that the world of the painting and the garden’s greenery could merge. Looking down through a window, water plants gather below; floating clear film inscribed with words among them lets the words within us become part of the garden’s green world.',
+        igHandle: '32o_watanabe', qrImg: 'assets/qr_codes/32o_watanabe.png', photos: ['assets/works/artist_08_1.jpg', 'assets/works/artist_08_2.jpg', 'assets/works/artist_08_3.jpg', 'assets/works/artist_08_4.jpg', 'assets/works/artist_08_5.jpg'] }
+    ];
+
+    const VENUE_PHOTOS = [
+      { src: 'assets/works/venue_01.jpg', label: '真鍋庭園 紅葉と番傘' },
+      { src: 'assets/works/venue_02.jpg', label: '森のオープンギャラリー「大きな木」案内看板' },
+      { src: 'assets/works/venue_03.jpg', label: 'ギャラリー誘導サイン' },
+      { src: 'assets/works/venue_04.jpg', label: '日本庭園の紅葉' },
+      { src: 'assets/works/venue_05.jpg', label: 'コニファーガーデン' },
+      { src: 'assets/works/venue_06.jpg', label: '真鍋庭園 ウェルカムゲート' }
+    ];
+
+    function renderGalleryUnit({ gId, wrapperCls, headerLeftCls, headerLeft, headerRight, nameJp, titleJp, titleEn, photos, altSep, gridCols }) {
+      const thumbs = photos.map((p, i) => {
+        const activeCls = i === 0 ? 'ring-2 ring-emerald-400 opacity-100' : 'opacity-75 hover:opacity-100';
+        return `
+            <button type="button" data-gallery="${gId}" data-src="${p}" class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-800/60 bg-[#040c07] transition-all ${activeCls}">
+              <img src="${p}" alt="${nameJp}${altSep}${titleJp}${altSep}写真${i + 1}" loading="lazy" decoding="async" class="w-full h-full object-cover" />
+            </button>`;
+      }).join('');
+      return `
+          <div id="${gId}" class="${wrapperCls}">
+            <div class="flex items-center justify-between px-1">
+              <span class="${headerLeftCls}">${headerLeft}</span>
+              <span class="text-[10px] font-mono text-gray-400">${headerRight}</span>
+            </div>
+            <div class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-700/60 bg-[#040c07] shadow-lg group cursor-pointer" data-lightbox-caption="${nameJp} — ${titleJp}">
+              <img id="${gId}-main" src="${photos[0]}" alt="${nameJp}${altSep}${titleJp}${altSep}メイン写真" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
+              <div class="absolute bottom-2.5 left-2.5 bg-black/65 backdrop-blur-md px-2.5 py-1 rounded-lg border border-emerald-500/30 text-[10px] font-serif-jp text-emerald-200">
+                ${titleJp} <span class="font-sans italic text-gray-300">${titleEn}</span>
+              </div>
+              <div class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md px-2 py-1 rounded-lg border border-white/15 text-[10px] font-mono text-gray-200">
+                🔍 拡大
+              </div>
+            </div>
+            <div class="grid ${gridCols} pt-0.5">${thumbs}
+            </div>
+          </div>`;
+    }
+
+    function renderGallerySection(artist) {
+      if (artist.subWorks) {
+        const blocks = artist.subWorks.map((sw, sIdx) => renderGalleryUnit({
+          gId: `gallery-${artist.id}-${sw.subId}`,
+          wrapperCls: `space-y-2${sIdx > 0 ? ' pt-3 border-t border-emerald-950/80' : ''}`,
+          headerLeftCls: 'text-[11px] font-mono text-emerald-400 font-bold',
+          headerLeft: sw.headerLabel,
+          headerRight: `全${sw.photos.length}枚`,
+          nameJp: artist.nameJp, titleJp: sw.titleJp, titleEn: sw.titleEn,
+          photos: sw.photos, altSep: '', gridCols: 'grid-cols-3 gap-2'
+        })).join('');
+        return `<div class="space-y-4 bg-[#050e09] p-3.5 rounded-2xl border border-emerald-900/60 shadow-inner">${blocks}</div>`;
+      }
+      return renderGalleryUnit({
+        gId: `gallery-${artist.id}`,
+        wrapperCls: 'space-y-2.5 bg-[#050e09] p-3.5 rounded-2xl border border-emerald-900/60 shadow-inner',
+        headerLeftCls: 'text-[11px] font-mono text-emerald-400 font-bold tracking-wider',
+        headerLeft: `🌿 INSTALLATION VIEW // 作品写真 (全${artist.photos.length}枚)`,
+        headerRight: 'タップで切替・拡大',
+        nameJp: artist.nameJp, titleJp: artist.titleJp, titleEn: artist.titleEn,
+        photos: artist.photos, altSep: ' ', gridCols: 'grid-cols-5 gap-1.5'
+      });
+    }
+
+    (function renderAll() {
+      // 1. Render Quick Index Chips
+      const qList = document.getElementById('quick-index-list');
+      if (qList) {
+        qList.innerHTML = ARTISTS_DATA.map((a, idx) => {
+          const cls = idx === 0
+            ? 'px-2.5 py-1 bg-emerald-900/80 hover:bg-emerald-600 border border-emerald-600/60 rounded-full text-xs text-white font-medium transition-all shadow-sm'
+            : 'px-2.5 py-1 bg-emerald-950/90 hover:bg-emerald-800 border border-emerald-800/80 rounded-full text-xs text-emerald-200/90 font-medium transition-all';
+          return `<a href="#artist-${a.id}" class="${cls}">${a.id}. ${a.nameJp}</a>`;
+        }).join('');
+      }
+
+      // 2. Render 8 Artist Cards
+      const wList = document.getElementById('works-list');
+      if (wList) {
+        wList.innerHTML = ARTISTS_DATA.map(a => `
+        <article id="artist-${a.id}" class="scroll-mt-16 bg-[#08130e] rounded-3xl p-6 border border-emerald-900/60 shadow-xl space-y-6 hover:border-emerald-700/80 transition-all">
+          <div class="flex items-start justify-between gap-4 border-b border-emerald-950/80 pb-4">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 bg-emerald-950 border border-emerald-800 text-emerald-300 font-mono text-xs font-bold rounded-full">#${a.id}</span>
+                <span class="text-xs font-mono text-gray-400">${a.furigana}</span>
+              </div>
+              <h3 class="text-2xl font-bold font-serif-jp text-white tracking-tight mt-1">${a.nameJp}</h3>
+              <p class="text-xs font-mono text-emerald-400/90 font-medium">${a.nameEn}</p>
+            </div>
+            <div class="text-right shrink-0">
+              <span class="inline-block px-3 py-1 bg-emerald-900/40 text-emerald-300 border border-emerald-700/50 text-[11px] font-mono rounded-lg">FISC 2026</span>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <div class="relative rounded-2xl overflow-hidden aspect-square border border-emerald-800/60 bg-emerald-950/40 shadow-lg">
+              <img src="${a.portrait}" alt="${a.nameJp} プロフィール写真" loading="lazy" decoding="async" class="w-full h-full object-cover" />
+              <div class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[11px] font-mono text-gray-200">👤 Artist Portrait</div>
+            </div>
+          </div>
+          <div class="space-y-3 bg-[#06100b] p-5 rounded-2xl border border-emerald-950/90">
+            <div class="border-b border-emerald-900/50 pb-2">
+              <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-bold">Work Title</div>
+              <div class="text-lg font-bold font-serif-jp text-white">${a.titleJp}</div>
+              <div class="text-xs font-sans italic text-gray-400">${a.titleEn}</div>
+            </div>
+            <div class="space-y-3 pt-1">
+              <div>
+                <div class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-bold mb-1">Statement</div>
+                <p class="text-xs text-gray-200 leading-relaxed font-serif-jp">${a.statementJp}</p>
+              </div>
+              <div class="pt-2 border-t border-emerald-950/60">
+                <p class="text-[11px] text-gray-400 leading-relaxed font-sans italic">${a.statementEn}</p>
+              </div>
+            </div>
+          </div>
+          ${renderGallerySection(a)}
+          <div class="bg-[#050e09] border border-emerald-900/40 rounded-2xl p-4 flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3.5">
+              <div class="w-14 h-14 bg-white p-1 rounded-xl shrink-0 shadow-md">
+                <img src="${a.qrImg}" alt="${a.nameJp} Instagram QR" loading="lazy" decoding="async" class="w-full h-full object-contain" />
+              </div>
+              <div>
+                <div class="text-[11px] text-gray-400 font-mono">Official Instagram</div>
+                <div class="text-xs font-mono font-bold text-white">@${a.igHandle}</div>
+                <a href="https://www.instagram.com/${a.igHandle}/" target="_blank" class="inline-block text-[11px] text-emerald-400 hover:text-emerald-300 underline font-mono mt-0.5">プロフィールを開く →</a>
+              </div>
+            </div>
+          </div>
+        </article>`).join('');
+      }
+
+      // 3. Render Venue Gallery Grid
+      const vGrid = document.getElementById('venue-gallery-grid');
+      if (vGrid) {
+        vGrid.innerHTML = VENUE_PHOTOS.map(v => `
+          <div class="relative rounded-xl overflow-hidden aspect-[4/3] border border-emerald-900/70 bg-[#040c07] cursor-pointer group" data-lightbox-src="${v.src}" data-lightbox-caption="${v.label}">
+            <img src="${v.src}" alt="${v.label}" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+          </div>`).join('');
+      }
+    })();
+
     function switchGalleryPhoto(galleryId, newSrc, btnEl) {
       const mainImg = document.getElementById(galleryId + '-main');
-      if (mainImg) {
-        mainImg.src = newSrc;
-      }
+      if (mainImg) mainImg.src = newSrc;
       const container = document.getElementById(galleryId);
       if (container) {
-        const buttons = container.querySelectorAll('button');
-        buttons.forEach(b => {
+        container.querySelectorAll('button[data-src]').forEach(b => {
           b.classList.remove('ring-2', 'ring-emerald-400', 'opacity-100');
           b.classList.add('opacity-75');
         });
@@ -1237,16 +447,49 @@
       }
     }
 
-    function openLightbox(src, caption) {
-      const modal = document.getElementById('photo-lightbox');
+    let lbState = { items: [], index: 0 };
+
+    function renderLightboxSlide() {
+      const item = lbState.items[lbState.index];
+      if (!item) return;
       const img = document.getElementById('lightbox-img');
       const cap = document.getElementById('lightbox-caption');
-      if (modal && img) {
-        img.src = src;
-        if (cap) cap.textContent = caption || '';
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
+      const cnt = document.getElementById('lightbox-counter');
+      const prevBtn = document.getElementById('lightbox-prev');
+      const nextBtn = document.getElementById('lightbox-next');
+      if (img) img.src = item.src;
+      if (cap) cap.textContent = item.caption || '';
+      if (cnt) cnt.textContent = `${lbState.index + 1} / ${lbState.items.length}`;
+      const showNav = lbState.items.length > 1;
+      if (prevBtn) prevBtn.classList.toggle('hidden', !showNav);
+      if (nextBtn) nextBtn.classList.toggle('hidden', !showNav);
+      if (item.galleryId && item.btn) switchGalleryPhoto(item.galleryId, item.src, item.btn);
+    }
+
+    function openLightbox(src, caption, items, startIndex) {
+      const modal = document.getElementById('photo-lightbox');
+      if (!modal) return;
+      const cleanSrc = (src || '').replace(/^.*?(assets\/)/, '$1');
+      if (Array.isArray(items) && items.length) {
+        lbState = { items, index: startIndex || 0 };
+      } else {
+        const vIdx = VENUE_PHOTOS.findIndex(v => v.src === cleanSrc);
+        if (vIdx >= 0) {
+          lbState = { items: VENUE_PHOTOS.map(v => ({ src: v.src, caption: v.label })), index: vIdx };
+        } else {
+          lbState = { items: [{ src: cleanSrc || src, caption: caption || '' }], index: 0 };
+        }
       }
+      renderLightboxSlide();
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function stepLightbox(delta) {
+      if (lbState.items.length <= 1) return;
+      lbState.index = (lbState.index + delta + lbState.items.length) % lbState.items.length;
+      renderLightboxSlide();
     }
 
     function closeLightbox() {
@@ -1254,8 +497,68 @@
       if (modal) {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
       }
     }
+
+    // Event Delegation for Gallery Thumbnails & Lightbox
+    document.addEventListener('click', (e) => {
+      const thumbBtn = e.target.closest('[data-gallery]');
+      if (thumbBtn) {
+        switchGalleryPhoto(thumbBtn.dataset.gallery, thumbBtn.dataset.src, thumbBtn);
+        return;
+      }
+      const stepBtn = e.target.closest('[data-lightbox-step]');
+      if (stepBtn) {
+        stepLightbox( Number(stepBtn.dataset.lightboxStep) );
+        return;
+      }
+      const lbTrigger = e.target.closest('[data-lightbox-caption]');
+      if (lbTrigger) {
+        const src = (lbTrigger.dataset.lightboxSrc || lbTrigger.querySelector('img')?.getAttribute('src') || '');
+        const galleryEl = lbTrigger.closest('[id^="gallery-"]');
+        if (galleryEl) {
+          const btns = Array.from(galleryEl.querySelectorAll('button[data-src]'));
+          const items = btns.map(b => ({ src: b.dataset.src, caption: lbTrigger.dataset.lightboxCaption, galleryId: galleryEl.id, btn: b }));
+          const idx = Math.max(0, items.findIndex(it => it.src === src));
+          openLightbox(src, lbTrigger.dataset.lightboxCaption, items, idx);
+        } else {
+          openLightbox(src, lbTrigger.dataset.lightboxCaption);
+        }
+        return;
+      }
+      if (e.target.id === 'photo-lightbox' || e.target.closest('[data-close-lightbox]')) {
+        closeLightbox();
+      }
+    });
+
+    // Keyboard & Touch Swipe Navigation for Lightbox + Floating Index Button
+    document.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('photo-lightbox');
+      if (!modal || modal.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeLightbox();
+      else if (e.key === 'ArrowRight') stepLightbox(1);
+      else if (e.key === 'ArrowLeft') stepLightbox(-1);
+    });
+
+    let touchStartX = 0;
+    const lbModal = document.getElementById('photo-lightbox');
+    if (lbModal) {
+      lbModal.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+      lbModal.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].screenX - touchStartX;
+        if (Math.abs(dx) > 40) stepLightbox(dx < 0 ? 1 : -1);
+      }, { passive: true });
+    }
+
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('back-to-index-btn');
+      if (btn) {
+        const show = window.scrollY > 360;
+        btn.classList.toggle('hidden', !show);
+        btn.classList.toggle('flex', show);
+      }
+    }, { passive: true });
   </script>
 
 </body>
